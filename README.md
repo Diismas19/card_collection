@@ -1,52 +1,44 @@
-# Card_collection
+# Magic collection manager
 
-This is a free program to store the data of your card collection of a game, like Magic: The gathering.
+This is a free program to manage your card collection of Magic: The gathering.
 
-To add cards to your collection you must have a .txt file with the quantity and the name of the card, for instance:
+To add cards to your collection you must have a .txt file in MTGO format
 ```
 3 Duress
 2 Negate
 ```
-this way you can add full decks to your collection at once. The .txt file must be in this format (MTGO Format of decks).
+this way you can add full decks to your collection at once.
 
-Then to actually add the cards you type
+Then to actually add the cards to your collection you do
 ```
 python3 add.py deck.txt
 ```
-this will add the cards to your collection.txt, which already is in the repositore (empty), if you already have some of the cards, it will just increase the number os the card.
+this will create and add the cards to a collection.txt (if doesn't exist yet). If you already have some of the cards, it will just increase the number of the card. The function will show wich cards have been added to your collection.
 
-If you want to delete some of the cards, you must have a .txt file with the quantity and the cards that you want to take out of your collection, and then type
+If you want to take out some of the cards of a list, you use a smaller .txt file with the cards and the quantity that you want to take out from a bigger file, you do
 ```
-python3 delete.py deck.txt
+python3 take_out.py smaller_list.txt bigger_list.txt
 ```
-this will move the cards away from your collection and put in a trash.txt. This trash.txt is useful for the next thing that our prorgram can do.
+which means, 'bigger_list - smaller_list', be careful to not change the order of the files, either a menssage will be prompt showing which list will be reduced, and you will have to confirm.
 
-If you want to buy new cards, giving up of some complete deck that you have, you can delete the deck that you will give up with delete.py, this will store the cards in trash.txt, and then
-```
-python3 swap.py deck.txt
-```
-where this time, deck.txt is the new deck that you want to buy. This function will print which cards you already have, and which ones you need to buy.
-
-Another function is the minus.py. Suppose that you have a big .txt file with some cards and want to take out a list of the, with another .txt file you can take out the cards from the big.txt with the cards of small.txt, doing
-```
-python3 minus.py big.txt small.txt
-```
-I recommend doing this with temporary files so you dont mess up with your collection.txt (not that it's difficult to redo the collection with add.py, it is just a recomendation).
-
-Other function is compare.py, which will takes two .txt deck files and compare then, and say which cards are in both lists and wich ones are not, you do
+If you want to compare two deck lists, to check wich cards are in both lists and wich are not, you do
 ```
 python3 compare.py 1.txt 2.txt
 ```
-this will print the cards that are in both lists, the cards that are only in the first .txt and the cards that are only in the second .txt.
-
-If you have any tips or recomendations of how to improve the program, feel free to add issues or pull requests.
-
+this will print the cards that are in both lists, the cards that are only in the first list and the cards that are only in the second list.
 
 ## How I use the program
 
-After cloning the repositore, I create a directory called 'decks' and copy and paste the lists .txt of all the decks that I have. Then added one by one with add.py. Now, anytime that I want to buy a new deck,
-giving up of one or more of mine, I can delete then and the use swap.py to check which cards I already have, then if I want to add back the cards from the trash that I will not use on the new deck on my collection,
-I create a temporary file with the cards that I already have (compared with the new deck), and then I minus.py from the trash.txt, and then add the trash.txt back to my collection with add.py.
+I usually import decks from sites like mtgo.com, mtggoldfish.com, mtgtop8.com, etc..., you can download the .txt file or copy and paste by yourself. Then once I use add.py to update my collection.
 
-Maybe there is something or another that you want to do with your collection that the functions that I wrote don't cover up, in this case you will have to edit the file by hand, and feel free to make a pull request explaning
-what you wanted that the functions could do to help.
+If you already have a good collection you can use compare.py to check which cards are on your collection, and then copy and paste the cards that you already have into a .txt file and then use take_out.py to take out the cards that you have from the list of the deck that you want to build. 
+
+When I want to build a new deck giving up of one of mines, I take out (with take_out.py) the deck that I have from my collection.txt, and them I compare to the deck that I want to build to check which cards I need to buy.
+
+## Conclusion
+
+I know that MTGO / MTG Arena already their own collection manager, but my thought are more about who plays physical mtg and those who want to take a look at the code.
+
+This is a personal project to practice my programming skills, but in a way or another it might be useful to you, so feel free to use the way that you want.
+
+If you have any tips or recomendations of how to improve the program, feel free to add issues or pull requests.
