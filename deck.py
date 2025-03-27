@@ -1,3 +1,7 @@
+class Deck:
+    def __init__(self,path_to_file):
+        self.path_to_file=path_to_file
+
 def get_dict_of_cards(path_to_file):
     cards_dict={}
     with open(path_to_file,'r') as cards_file:
