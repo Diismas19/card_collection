@@ -116,27 +116,3 @@ def compare_files(path_to_file_1,path_to_file_2):
     else:
         print('The cards that are in both files are:')
         print_dict(both_dict)
-
-# dict_1={'Birds of Paradise': 4,'Elvish Mystic':4,'Fanatic of Rhonas':4}
-# dict_2={'Birds of Paradise': 4,'Elvish Mystic':2,'Pugnacious Hammerskull':4}
-
-# both_dict=overlap_dicts(dict_1,dict_2)
-# minus_dicts(dict_1,both_dict)
-# clean_dict(dict_1)
-# if len(dict_1) == 0:
-#     print(f'There are no cards that are only in dict_1 file')
-# else:
-#     print(f'The cards that are only in the dict_1 file are:')
-#     print_dict(dict_1)
-# minus_dicts(dict_2,both_dict)
-# clean_dict(dict_2)
-# if len(dict_2) == 0:
-#     print(f'There are no cards that are only in dict_2 file')
-# else:
-#     print(f'The cards that are only in the dict_2 file are:')
-#     print_dict(dict_2)
-# if len(both_dict) == 0:
-#     print('There are no cards that are in both lists.')
-# else:
-#     print('The cards that are in both files are:')
-#     print_dict(both_dict)
