@@ -11,9 +11,9 @@ this way you can add full decks to your collection at once.
 
 Then to actually add the cards to your collection you do
 ```
-python3 add.py deck.txt
+python3 add.py path_to_decklist.txt path_to_collection.txt
 ```
-this will create and add the cards to a collection.txt (if doesn't exist yet). If you already have some of the cards, it will just increase the number of the card. The function will show wich cards have been added to your collection.
+this will create and add the cards to a collection.txt (if doesn't exist yet). If you already have some of the cards, it will just increase the number of the card. You don't need to use this function only to add cards to your collection, you can add any .txt files. 
 
 If you want to take out some of the cards of a list, you use a smaller .txt file with the cards and the quantity that you want to take out from a bigger file, you do
 ```
