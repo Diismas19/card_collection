@@ -44,3 +44,20 @@ def add_files(path_of_file_to_be_added,path_of_file_to_add):
     sum_of_dicts=sum_dicts(dict_to_add,dict_to_be_added)
     write_in_file(sum_of_dicts,path_of_file_to_be_added)
     print(f'Deck, located in {path_of_file_to_add}, added sucessfully on {path_of_file_to_be_added}.')
+
+def take_out_file(path_big_file,path_small_file):
+    '''A function that take out that cards that are in the small file from the big file.'''
+    big_dict=get_dict(path_big_file)
+    small_dict=get_dict(path_small_file)
+    del_list=[]
+    for key,value in small_dict.items():
+        if value > big_dict[key]:
+            raise Exception(f'You have more {key} copies on the small file than in the big file.')
+        else:
+            big_dict[key]-=value
+        if big_dict[key]==0:
+            del_list.append(key)
+    for item in del_list:
+        del big_dict[item]
+    write_in_file(big_dict,path_big_file)
+    print(f'The list in {path_small_file} has sucessfully deduced the cards from {path_big_file}.')

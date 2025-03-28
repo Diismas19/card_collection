@@ -17,9 +17,9 @@ this will create and add the cards to a collection.txt (if doesn't exist yet). I
 
 If you want to take out some of the cards of a list, you use a smaller .txt file with the cards and the quantity that you want to take out from a bigger file, you do
 ```
-python3 take_out.py smaller_list.txt bigger_list.txt
+python3 take_out.py bigger_list.txt smaller_list.txt
 ```
-which means, 'bigger_list - smaller_list', be careful to not change the order of the files, either a menssage will be prompt showing which list will be reduced, and you will have to confirm.
+which means, 'bigger_list - smaller_list', be careful to not change the order of the files. If you try to take out a quantity of cards that you don't have in the bigger file, an error will show up and will print the name of the card that is causing the error.
 
 If you want to compare two deck lists, to check wich cards are in both lists and wich are not, you do
 ```
