@@ -34,7 +34,7 @@ def get_dict(path_to_file):
                 cards_dict[card_name]=int(card_count)
     return cards_dict
 
-def add_files(path_of_file_to_add,path_of_file_to_be_added):
+def add_files(path_of_file_to_be_added,path_of_file_to_add):
     '''A function that add the content of two files. If file to be written doesn't exist, the function will create it.'''
     if os.path.exists(path_of_file_to_be_added) == False:
         with open(path_of_file_to_be_added,'w') as file:

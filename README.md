@@ -11,7 +11,7 @@ this way you can add full decks to your collection at once.
 
 Then to actually add the cards to your collection you do
 ```
-python3 add.py path_to_decklist.txt path_to_collection.txt
+python3 add.py path_to_collection.txt path_to_decklist.txt
 ```
 this will create and add the cards to a collection.txt (if doesn't exist yet). If you already have some of the cards, it will just increase the number of the card. You don't need to use this function only to add cards to your collection, you can add any .txt files. 
 
