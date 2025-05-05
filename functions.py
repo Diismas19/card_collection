@@ -81,7 +81,7 @@ def add_files(path_of_file_to_be_added,path_of_file_to_add):
     dict_to_be_added=get_dict(path_of_file_to_be_added)
     sum_of_dicts=sum_dicts(dict_to_add,dict_to_be_added)
     write_in_file(sum_of_dicts,path_of_file_to_be_added)
-    print(f'Deck, located in {path_of_file_to_add}, added sucessfully on {path_of_file_to_be_added}.')
+    print(f'Deck located in {path_of_file_to_add}, added sucessfully on {path_of_file_to_be_added}.')
 
 def take_out_file(path_big_file,path_small_file):
     '''A function that take out that cards that are in the small file from the big file.'''
